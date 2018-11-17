@@ -5,8 +5,7 @@ const _ = {
     numberMin = Math.min(number, upper)
     return Math.max(Math.min(number, upper), lower)
   },
-  inRange: (number, start, end) => {
-    end === undefined ? end = start : start = 0
+  inRange: (number, start = 0, end = start) => {
     const isInRange = function(number, start, end) {
       return number >= Math.min(start, end) && number < Math.max(start, end)
     }
@@ -75,4 +74,4 @@ const _ = {
   }
 }
 
-module.exports = _;
+module.exports = _ ;
